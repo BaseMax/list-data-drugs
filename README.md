@@ -1,7 +1,5 @@
 # Drug List Scraper
 
-## Description
-
 This Python script scrapes drug-related information from the "Talk to Frank" website and saves the extracted data in both JSON and YAML formats. It utilizes the `requests` library to fetch the webpage, `BeautifulSoup` for HTML parsing, and `json` and `yaml` libraries for data storage.
 
 ## Features

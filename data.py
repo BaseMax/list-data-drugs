@@ -1,4 +1,6 @@
 import requests
+import json
+import yaml
 from bs4 import BeautifulSoup
 
 def extract_drug_list():
@@ -24,5 +26,12 @@ def extract_drug_list():
     return drug_items
 
 drug_list = extract_drug_list()
+
+with open("drugs.json", "w", encoding="utf-8") as json_file:
+    json.dump(drug_list, json_file, ensure_ascii=False, indent=4)
+
+with open("drugs.yaml", "w", encoding="utf-8") as yaml_file:
+    yaml.dump(drug_list, yaml_file, allow_unicode=True, default_flow_style=False)
+
 for drug in drug_list:
     print(drug)
